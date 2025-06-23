@@ -1,5 +1,5 @@
 # PDF Data Extractor and AI Summarizer
-This project provides a Python script to extract structured data from scanned PDF documents (specifically targeting "Form ADT-1" corporate filings) using Optical Character Recognition (OCR). It then leverages the Groq API and a large language model to generate a concise, non-technical summary of the extracted information.
+This project provides a Python script to extract structured data from scanned PDF documents (specifically targeting **"Form ADT-1"** corporate filings) using **Optical Character Recognition (OCR)**. It then leverages the **Groq API** and a large language model to generate a concise, non-technical summary of the extracted information.
 
 ## **Features**
 - **OCR-based Text Extraction:** Handles scanned PDFs where text cannot be directly selected or copied, by converting pages into images and applying OCR.
