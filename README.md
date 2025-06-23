@@ -1,5 +1,13 @@
 # PDF Data Extractor and AI Summarizer
 This project provides a Python script to extract structured data from scanned PDF documents (specifically targeting **"Form ADT-1"** corporate filings) using **Optical Character Recognition (OCR)**. It then leverages the **Groq API** and a large language model to generate a concise, non-technical summary of the extracted information.
+## **Why I use OCR?**
+The file **"Form ADT-1-29092023_signed.pdf"** contains some input field text in the form section that **cannot be selected or copied** because it is actually a **scanned image** of a document. Libraries like **PyMuPDF, pdfplumber, and pdfminer.six** can only extract **machine-readable text**—they cannot interpret:
+- Pixel-based text in scanned documents
+- Text embedded within images
+  
+To handle this unselectable content, I used an **OCR solution that combines Tesseract with Poppler**.
+ 
+This OCR setup uses **Poppler, Tesseract, and PDF2Image** to extract text from scanned PDFs by converting pages into images and recognizing text automatically. It works well with complex layouts, and multiple pages.
 
 ## **Features**
 - **OCR-based Text Extraction:** Handles scanned PDFs where text cannot be directly selected or copied, by converting pages into images and applying OCR.
